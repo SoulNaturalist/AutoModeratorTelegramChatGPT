@@ -8,7 +8,7 @@ class AutoModeration:
     self.ban_words = ban_words
     self.delete = delete
     self.ban = ban
-  def gen_context_msg_gpt() -> None:
+  def gen_context_msg_gpt() -> str:
     if self.ban_words:
       return """Hi, read this message\n{0} and if it contains at least one word of their list - {1}\nAlso, do you think this message is spam?, say yes or no"""
     else:
