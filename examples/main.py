@@ -57,4 +57,4 @@ class TelegramBot:
         executor.start_polling(dp)
 
 if __name__ == "__main__":
-    TelegramBot("telegram bot").start()
+    TelegramBot("telegram bot token").start()
