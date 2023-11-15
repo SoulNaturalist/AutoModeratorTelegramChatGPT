@@ -41,6 +41,7 @@ class AutoModeration:
         messages = [{"role": "user", "content": content_to_chatgpt}]
         chatgpt_response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
         response_from_chatgpt = chatgpt_response["choices"][0]["message"]["content"]
+        # Offical api provider or gpt4free provider
         return "да" in response_from_chatgpt.lower() or "yes" in response_from_chatgpt.lower() or "contains" in response_from_chatgpt.lower()
 
 
